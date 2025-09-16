@@ -20,9 +20,9 @@ WITH RankedQuiz AS (
     FROM quizzes_quizsession qq
 	LEFT JOIN UsersMbeat uu on uu.id = qq.user_id
 	LEFT JOIN ContentsCourse2 cc on cc.id = qq.content_id
-    WHERE qq.title LIKE '%Learning Journey FAM & RAM : Basic%'
-       OR qq.title LIKE '%Learning Journey FAM & RAM : Intermediate%'
-	   OR qq.title LIKE '%Learning Journey FAM & RAM : Advance%'
+    WHERE qq.title LIKE '%Learning Journey FAM & RAM : Basic Course%'
+       OR qq.title LIKE '%Learning Journey FAM & RAM : Intermediate Course%'
+	   OR qq.title LIKE '%Learning Journey FAM & RAM : Advance Course%'
 )
 
 SELECT
@@ -53,3 +53,4 @@ FROM RankedQuiz rq
 LEFT JOIN DataEmployeeMbeat de ON de.nik = rq.username
 WHERE rq.rn = 1   -- ambil skor tertinggi, jika sama ambil tanggal terawal
 ORDER BY rq.course_title ASC, rq.username ASC;
+
