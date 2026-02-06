@@ -24,6 +24,8 @@ WHERE de.JobTitle IN (
     'Field Asset Management Car', 
     'Field Asset Management Motorcycle', 
     'Remedial Asset Management Car', 
-    'Remedial Asset Management Motorcycle'
+    'Remedial Asset Management Motorcycle',
+	'Field Asset Management',
+	'Remedial Asset Management'
 ) 
 AND de.EmploymentStatus IN ('Contract', 'Mitra', 'Outsource', 'Permanent');
